@@ -52,7 +52,7 @@ Year 2017 Refactored (86 ms) | Year 2018 Refactored (78 ms)
 ![Image 2017 Analysis Time](./Resources/VBA_Challenge_2017.png) | ![Image 2018 Analysis Time](./Resources/VBA_Challenge_2018.png)
 
 ### Actual Refactoring Speedup
-The 2017 speedup is $504 / 86 = 5.9$ times as fast. The 2018 speedup is $498 / 78 = 6.4$ times as fast. The average speedup over the two years is $(504 + 498) / (86 + 78) = 6.1$ times as fast.
+The 2017 speedup is 504 / 86 = 5.9 times as fast. The 2018 speedup is 498 / 78 = 6.4 times as fast. The average speedup over the two years is (504 + 498) / (86 + 78) = 6.1 times as fast.
 
 
 ## Summary
