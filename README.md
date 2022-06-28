@@ -30,13 +30,13 @@ This section contains calculations which predict how much faster the refactored 
 The refactoring allows the raw data of each stock to be scanned for content only once instead of multiple times.
 
 #### Before Refactoring
-Let $n = 12$ be the number of stocks. The original script first scans ticker AY. Next it scans ticker AY again and ticker CISQ. Next it scans ticker AY yet again, ticker CISQ again, and ticker DQ. In all it must perform $n (n+1) / 2 = 78$ scans, a complexity $O(n^2)$ algorithm.
+Let $ n = 12 $ be the number of stocks. The original script first scans ticker AY. Next it scans ticker AY again and ticker CISQ. Next it scans ticker AY yet again, ticker CISQ again, and ticker DQ. In all it must perform $ n (n+1) / 2 = 78 $ scans, a complexity $O(n^2)$ algorithm.
 
 #### After Refactoring
 However, the refactored script requires just $n = 12$ scans, a complexity $O(n)$ algorithm. 
 
 #### Refactoring Speedup
-The "refactoring speedup" is the ratio of the number of the before and after refactoring scans, which is $ (n+1) / 2 = 6.5 $, which is pretty good for Steve's $n = 12$ analysis. However, Steve wants to analyze thousands of stocks. If $n = 1000,$ the speedup is $ (1000 + 1) / 2 = 500.5$! Steve was right to worry about the necessity of refactoring the original script.
+The "refactoring speedup" is the ratio of the number of the before and after refactoring scans, which is $ (n+1) / 2 = 6.5 $, which is pretty good for Steve's $ n = 12 $ analysis. However, Steve wants to analyze thousands of stocks. If $ n = 1000 $, the speedup is $ (1000 + 1) / 2 = 500.5 $! Steve was right to worry about the necessity of refactoring the original script.
 
 ### Results from the Original VBA Script
 The original VBA script AllStocksAnalysis was run for years 2017 and 2018, and messagebox data were recorded (messageboxes not shown). The 2017 analysis ran in 0.504 seconds, and the 2018 analysis ran in 0.498 seconds. One would expect the two analyses to complete in about the same time, as both 2017 and 2018 contain 3012 rows of raw data. The difference between the two times was 6 milliseconds, which is close to the precision of the `Timer` function:
